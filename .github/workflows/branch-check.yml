@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: CodesmithLLC/assessment-auto-merge-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ASSESSMENT_TOKEN }}
