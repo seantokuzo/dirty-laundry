@@ -29,6 +29,7 @@ For this part you will be editing the `server/server.js` file.
 - [ ] When you visit `http://localhost:3333/` in the browser, it should serve the `index.html` file from the `views` folder. This is the login page for the application.
 - [ ] When you visit `http://localhost:3333/secret` in the browser, you should render the `secret.html` file from the `views` folder. This is the To-Do application
 - [ ] You should also serve the CSS and JS that the html files are requesting. These are located in the `assets` folder. Make sure the `Content-Type` header is getting properly set in the HTTP response. (Some methods from some frameworks infer the content type from the file extension and set the header automatically.)
+- [ ] Visiting any route that is not defined should respond to the client with a `404` status code and an error message `Page not found`.
 
 
 
@@ -46,6 +47,8 @@ In the `server/models/taskController.js` file, add the following functionality t
 - [ ] Function `postTask` should create a new item in the database
 - [ ] Function `getTasks` should retrieve all items from the database and send it back to the client as JSON
 - [ ] Function `deleteTask` should find items in the database based on an ID number and delete that item if it exists
+- [ ] Errors in any of the controllers (such as those related to querying or updating the database) should trigger a **global error handler** rather than proceeding to the next function in the middleware chain. If you have not already created a global error handler, add one to the `server.js` file. When invoked, it should return a relevant error message to the client, along with a status code of `500`.
+
 
 
 
